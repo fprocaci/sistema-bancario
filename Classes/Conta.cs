@@ -1,6 +1,6 @@
 using System;
 
-namespace DIO.Bank.Classes
+namespace DIO.Bank
 {
     public class Conta
     {
@@ -9,12 +9,12 @@ namespace DIO.Bank.Classes
         private double Credito { get; set; }
         private string Nome { get; set; }
 
-        public Conta(TipoConta tipoConta, double Saldo, double Credito, string Nome)
+        public Conta(TipoConta tipoConta, double saldo, double credito, string nome)
         {
-            this.TipoConta = TipoConta;
-            this.Saldo = Saldo;
-            this.Credito = Credito;
-            this.Nome = Nome;
+            this.TipoConta = tipoConta;
+            this.Saldo = saldo;
+            this.Credito = credito;
+            this.Nome = nome;
         }
 
         public bool Sacar(double valorSaque)
@@ -50,7 +50,7 @@ namespace DIO.Bank.Classes
         public override string ToString()
         {
             string retorno = "";
-            retorno += "TipoConta " + this.TipoConta + " | ";
+            retorno += "Tipo de Conta " + this.TipoConta + " | ";
             retorno += "Nome: " + this.Nome + " | ";
             retorno += "Saldo " + this.Saldo + " | ";
             retorno += "Crédito " + this.Credito + " | ";
